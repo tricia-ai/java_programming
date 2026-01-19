@@ -1,5 +1,4 @@
 package io.github.tricia_ai.java_programming;
-
 import java.util.Scanner;
 
 public class Assessment1_Tricia {
@@ -17,7 +16,7 @@ public class Assessment1_Tricia {
         int product = a *b;
         System.out.println("The product of a & b: "+product);
         int result = (a + b) * c;
-        System.out.println("The result of the operation (a + b) * c: "+sum);
+        System.out.println("The result of the operation (a + b) * c: "+result);
         int modulo = a % b;
         System.out.println("The remainder when a is divided by b: "+modulo);
 
@@ -30,7 +29,7 @@ public class Assessment1_Tricia {
         int score = scanner.nextInt();
 
         //scanner.close();
-        String grade = " ";
+        String grade;
 
         if (score > 100) {
             System.out.println("Error: Score must be between 0 and 100");
@@ -51,8 +50,6 @@ public class Assessment1_Tricia {
             System.out.println("Grade: "+grade);
         }
 
-
-
         /* --------------------------------------------------------
                               Number Sequence
         -----------------------------------------------------------*/
@@ -71,7 +68,6 @@ public class Assessment1_Tricia {
             }
         }
 
-
         /* --------------------------------------------------------
                               Input Validation
         -----------------------------------------------------------*/
@@ -81,13 +77,13 @@ public class Assessment1_Tricia {
         while (isRunning){
             Scanner scan = new Scanner(System.in);
             scan.nextLine();
-            System.out.println("Enter a positive integer: ");
+            System.out.print("Enter a positive integer: ");
             int positiveInteger = scan.nextInt();
             int nFactorial = 1;
 
 
             if (positiveInteger < 0){
-                System.out.println("Invalid input! Please enter a positive integer: ");
+                System.out.print("Invalid input! Please enter a positive integer: ");
                 scan.nextLine();
                 int newPositiveInteger = scan.nextInt();
                 for (int i = 1; i <= newPositiveInteger; i++){
@@ -105,9 +101,6 @@ public class Assessment1_Tricia {
             }
             scan.close();
         }
-
-
-
 
         /* --------------------------------------------------------
                               Pattern Printing
