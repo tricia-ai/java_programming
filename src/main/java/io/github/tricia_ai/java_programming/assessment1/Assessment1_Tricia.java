@@ -1,4 +1,4 @@
-package io.github.tricia_ai.java_programming;
+package io.github.tricia_ai.java_programming.assessment1;
 import java.util.Scanner;
 
 public class Assessment1_Tricia {
