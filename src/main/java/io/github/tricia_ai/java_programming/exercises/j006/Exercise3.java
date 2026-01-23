@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercise3 {
+    //made it a class variable to make it accessible to all classes
     static int[] scores;
     public static void main(String[] args) {
         scores = studentGrades(5);
@@ -25,7 +26,7 @@ public class Exercise3 {
         for (int i = 0; i < scores.length; i++){
             sum += scores[i];
         }
-        double average = (double) (sum / scores.length);
+        double average = (double) sum / scores.length;
         return average;
 
     }
