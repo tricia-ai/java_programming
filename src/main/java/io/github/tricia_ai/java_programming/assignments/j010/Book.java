@@ -94,7 +94,6 @@ public class Book {
         while (input) {
             if (reply.equals("Yes")){
                 System.out.print("Enter book name: ");
-                scan.nextLine();
                 String bookName = scan.nextLine();
                 if (getTitle().equals(bookName)){
                     System.out.println("Yes the book is available, you can borrow it");
@@ -121,7 +120,7 @@ public class Book {
 
     public void returnBook(){
         Scanner scan = new Scanner(System.in);
-        System.out.print("Would you like to return a book? (Yes or No) ");
+        System.out.print("Would you like to return a book? (Yes or No): ");
         String reply = scan.nextLine();
         boolean input = true;
         while (input){
@@ -145,7 +144,7 @@ public class Book {
                 input = false;
             } else {
                 System.out.println("Kindly try again with the correct format");
-                System.out.print("Would you like to return a book? (Yes or No) ");
+                System.out.print("Would you like to return a book? (Yes or No): ");
                 reply = scan.nextLine();
 
                 input = true;
