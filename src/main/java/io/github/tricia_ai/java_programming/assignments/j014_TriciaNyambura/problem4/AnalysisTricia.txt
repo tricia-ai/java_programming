@@ -1,0 +1,16 @@
+PROBLEM 1
+public void calculateBonus() {
+        return salary * 0.1;
+    }
+In the above code there is a return which is not a valid statement as the
+method is void thus cannot return anything.
+
+PROBLEM 2
+public static String companyName;
+If set to public anyone can change its value therefore needs to be of access type
+protected or private given the required access.
+
+PROBLEM 3
+salary = salary;
+Use this.salary to refer to the created object is salary is not specific to
+the created

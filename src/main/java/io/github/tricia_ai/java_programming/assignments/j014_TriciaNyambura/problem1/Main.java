@@ -1,4 +1,4 @@
-package io.github.tricia_ai.java_programming.assignments.j014.problem1;
+package io.github.tricia_ai.java_programming.assignments.j014_TriciaNyambura.problem1;
 
 public class Main {
 

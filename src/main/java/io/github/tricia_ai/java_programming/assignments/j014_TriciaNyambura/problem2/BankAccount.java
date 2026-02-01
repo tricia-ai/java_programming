@@ -1,4 +1,4 @@
-package io.github.tricia_ai.java_programming.assignments.j010;
+package io.github.tricia_ai.java_programming.assignments.j014_TriciaNyambura.problem2;
 
 public class BankAccount {
     private String accountNumber;
@@ -36,35 +36,43 @@ public class BankAccount {
         return balance;
     }
 
-    public int deposit(int amount){
+    public int deposit(int amount) throws InvalidTranscations {
         if (amount > 0){
             balance = getBalance() + amount;
             System.out.println("The new balance after depositing "+amount+" is: "+balance);
             return balance;
         } else {
             System.out.println("The amount is less than 0");
-            return 0;
+            throw new InvalidTranscations("The amount is less than 0");
         }
     }
 
-    public int withdraw(int amount){
+    public int withdraw(int amount) throws InsufficientFunds {
         if (amount < getBalance()){
             balance = getBalance() - amount;
             System.out.println("The new balance after withdrawing "+amount+" is: "+balance);
             return balance;
         } else {
             System.out.println("Your balance is low");
-            return 0;
+            throw new InsufficientFunds("Your balance is low");
         }
 
+    }
+
+    public int transfer(String toAccount, int amount) throws AccountNotFound{
+        if (getBalance() > 100 || toAccount.matches("224564\\d+")){
+            balance = getBalance() - amount;
+            System.out.printf("The new balance: %d%n Transferred to Account: %s%n Amount: %s%n",balance,toAccount,amount);
+        } else {
+            throw new AccountNotFound("Not a valid account number");
+        }
+        return balance;
     }
     public void displayInfo(){
         System.out.println("/////////////////////////////// Account Information ////////////////////////////////");
         System.out.println();
         System.out.println("Account Number: "+getAccountNumber()+" Account Holder: "
-        +getAccountHolder()+ " Account Balance: "+getBalance());
+                +getAccountHolder()+ " Account Balance: "+getBalance());
 
     }
-
-
 }
