@@ -14,3 +14,9 @@ PROBLEM 3
 salary = salary;
 Use this.salary to refer to the created object is salary is not specific to
 the created
+
+PROBLEM 4
+public EmployeeManagement(String name) {
+        employeeName = name;
+    }
+The constructor should be able to take in the salary too when an object is instantiated.
